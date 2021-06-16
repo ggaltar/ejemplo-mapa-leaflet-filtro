@@ -99,6 +99,6 @@ function especieSelect() {
 
     grupoPrimates.clearLayers();
     grupoPrimates.addLayer(capa_carnivora);
-    control_capas.addOverlay(capa_carnivora, 'Registros individuales de primates');
+    control_capas.addOverlay(capa_carnivora, 'Registros de ' + miSelect);
   });	
 };

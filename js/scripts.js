@@ -68,6 +68,9 @@ function popup_registros (feature, layer) {
 layer.bindPopup("<div style=text-align:center><h3>"+feature.properties.species+
   "<h3></div><hr><table><tr><td>Provincia: "+feature.properties.stateProvince+
   "</td></tr><tr><td>Fecha: "+feature.properties.eventDate+
+  "</td></tr><tr><td>Fecha: "+feature.properties.locality+
+  "</td></tr><tr><td>Fecha: "+feature.properties.institutionCode+
+  "</td></tr><tr><td>ID del registro: "+"<a href='" + feature.properties.occurrenceID + "'>Más información</a>"+  
   "</td></tr></table>",
 {minWidth: 150, maxWidth: 200});				
 	};
@@ -82,7 +85,7 @@ function especieSelect() {
 
     function(geodata) {
       // Capa de registros individuales
-      var capa_carnivora = L.geoJson(geodata, {
+      var capa_primates = L.geoJson(geodata, {
       pointToLayer: function (feature, latlng) {
                       return L.circleMarker(latlng, MarkerOptions);
                     },
@@ -98,7 +101,7 @@ function especieSelect() {
 
 
     grupoPrimates.clearLayers();
-    grupoPrimates.addLayer(capa_carnivora);
-    control_capas.addOverlay(capa_carnivora, 'Registros de ' + miSelect);
+    grupoPrimates.addLayer(capa_primates);
+    control_capas.addOverlay(capa_primates, 'Registros de ' + miSelect);
   });	
 };

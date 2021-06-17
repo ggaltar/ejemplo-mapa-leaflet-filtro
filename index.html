@@ -16,7 +16,7 @@
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body onload="especieSelect()">
     <h1>Ejemplo de mapa Leaflet con filtrado de datos</h1>     
 
     <a href="https://github.com/tpb729-desarrollosigweb-2021/ejemplo-mapa-leaflet-filtro">Código fuente</a>
@@ -25,11 +25,11 @@
 	<div id="panel" style = "margin-left:0px; background-color:#D3D3D3;">
 					<label>Seleccione una especie</label>
 					<select id="especie" onchange="especieSelect()">
-					  <option value="Alouatta palliata">Alouatta palliata</option>
-					  <option value="Ateles geoffroyi">Ateles geoffroyi</option>
-					  <option value="Cebus capucinus">Cebus capucinus</option>
-					  <option value="Saimiri oerstedii">Saimiri oerstedii</option>
 					  <option value="TODAS">Todas</option>
+					  <option value="Alouatta palliata">Mono congo</option>
+					  <option value="Ateles geoffroyi">Mono colorado</option>
+					  <option value="Cebus capucinus">Mono carablanca</option>
+					  <option value="Saimiri oerstedii">Mono titi</option>
 					</select>
 		</div>	
     
